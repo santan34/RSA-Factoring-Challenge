@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 def main():
-    f = open("tests/test00", "r")
+    import sys
+    file = sys.argv[1]
+    f = open(file, "r")
     for x in f:
         num = int(x)
         prime = get_smallest_prime(num)
         other = int(num/prime)
         print(f"{num}={other}*{prime}")
-
+    f.close()
 
 def get_smallest_prime(num):
     from math import sqrt
