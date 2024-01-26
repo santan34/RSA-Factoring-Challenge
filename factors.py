@@ -10,6 +10,7 @@ def main():
         print(f"{num}={other}*{prime}")
     f.close()
 
+
 def get_smallest_prime(num):
     from math import sqrt
     if num % 2 == 0:
@@ -17,5 +18,12 @@ def get_smallest_prime(num):
     for i in range(3, int(sqrt(num))+1, 2):
         if num % i == 0:
             return i
+
+
 if __name__ == "__main__":
+    import time
+    start = time.time()
     main()
+    end = time.time()
+    print(end - start)
+
